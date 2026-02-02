@@ -8,11 +8,11 @@ import PhoneMenu from './phoneMenu';
 
 const NavbarLinksSection2 = () => {
   return (
-    <div className="flex items-center space-x-4 p-1">
+    <div className="flex items-center justify-between space-x-4 p-1 2xl:-mr-4">
       <section className='hidden md:block'>
         <SearchComponent />
       </section>
-      <div className="relative">
+      <div>
         <Link href={"/curt"}>
           <button
             className={`relative z-10 py-2 px-6 transition-colors duration-300 font-bold text-white bg-amber-500 rounded-3xl`}
@@ -38,7 +38,7 @@ const NavbarLinksSection2 = () => {
       <section>
         <UserMenu/>
       </section>
-      <section className='block 2xl:hidden'>
+      <section className='2xl:hidden'>
         <PhoneMenu/>
       </section>
     </div>

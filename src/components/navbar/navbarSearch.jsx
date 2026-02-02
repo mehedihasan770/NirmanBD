@@ -11,7 +11,7 @@ const SearchComponent = () => {
           transition={{ duration: 0.3 }}
           className="flex items-center"
         >
-          <form className="flex items-center bg-white border border-black/50 rounded-full px-4 py-2 shadow-sm">
+          <form className="flex items-center bg-white/50 rounded-3xl backdrop-blur-3xl px-4 py-2 shadow">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

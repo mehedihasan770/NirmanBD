@@ -62,7 +62,7 @@ const ModernUserMenu = () => {
         className={`
           relative flex items-center justify-center
           w-11 h-11 rounded-full cursor-pointer
-          bg-linear-to-br from-gray-100 to-gray-200
+          bg-white/50 backdrop-blur-3xl
           shadow-sm hover:shadow-md
           border-2 transition-all duration-300
           ${isOpen ? 'border-amber-500' : 'border-transparent'}
@@ -96,7 +96,7 @@ const ModernUserMenu = () => {
               damping: 25,
               duration: 0.2 
             }}
-            className="absolute right-0 mt-4 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50"
+            className="absolute right-0 mt-4 w-64 bg-white/50 rounded-3xl backdrop-blur-3xl shadow-xl overflow-hidden z-50"
             style={{ 
               boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05)'
             }}
@@ -144,31 +144,8 @@ const ModernUserMenu = () => {
                     </span>
                     <span>{item.label}</span>
                   </div>
-                  <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded">
-                    {item.shortcut}
-                  </span>
                 </button>
               ))}
-            </div>
-
-            <div className="px-4">
-              <div className="border-t border-gray-100"></div>
-            </div>
-
-            <div 
-              className="px-4 py-3 bg-gray-50"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <div className="flex items-center justify-between">
-                <p className="text-xs text-gray-500">
-                  v2.5.1
-                </p>
-                <div className="flex items-center space-x-1">
-                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                </div>
-              </div>
             </div>
           </motion.div>
         )}

@@ -14,8 +14,16 @@ const PhoneMenu = () => {
 
   const navItems = [
     { name: "Home", href: "/", icon: <FiHome className="w-5 h-5" /> },
-    { name: "Products", href: "/products", icon: <FiPackage className="w-5 h-5" /> },
-    { name: "Our Story", href: "/story", icon: <FiBookOpen className="w-5 h-5" /> },
+    {
+      name: "Products",
+      href: "/products",
+      icon: <FiPackage className="w-5 h-5" />,
+    },
+    {
+      name: "Our Story",
+      href: "/story",
+      icon: <FiBookOpen className="w-5 h-5" />,
+    },
     { name: "Contact", href: "/contact", icon: <FiMail className="w-5 h-5" /> },
   ];
 
@@ -25,8 +33,8 @@ const PhoneMenu = () => {
         setIsOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -36,23 +44,29 @@ const PhoneMenu = () => {
         onClick={() => setIsOpen(!isOpen)}
         className={`
           w-11 h-11 rounded-full flex flex-col items-center justify-center
-          bg-gradient-to-br from-gray-100 to-gray-200 cursor-pointer
+          bg-linear-to-br from-gray-100 to-gray-200 cursor-pointer
           border-2 transition-all duration-300
-          ${isOpen ? 'border-amber-500 ring-2 ring-amber-500/30' : 'border-transparent'}
+          ${isOpen ? "border-amber-500 ring-2 ring-amber-500/30" : "border-transparent"}
           hover:shadow-md
         `}
       >
         {/* 3 Lines */}
         <div className="space-y-1.5">
-          <span className={`block w-5 h-0.5 bg-gray-700 rounded-full transition-all duration-300 ${
-            isOpen ? 'rotate-45 translate-y-1.5' : ''
-          }`} />
-          <span className={`block w-5 h-0.5 bg-gray-700 rounded-full transition-all duration-300 ${
-            isOpen ? 'opacity-0' : 'opacity-100'
-          }`} />
-          <span className={`block w-5 h-0.5 bg-gray-700 rounded-full transition-all duration-300 ${
-            isOpen ? '-rotate-45 -translate-y-1.5' : ''
-          }`} />
+          <span
+            className={`block w-5 h-0.5 bg-gray-700 rounded-full transition-all duration-300 ${
+              isOpen ? "rotate-45 translate-y-1.5" : ""
+            }`}
+          />
+          <span
+            className={`block w-5 h-0.5 bg-gray-700 rounded-full transition-all duration-300 ${
+              isOpen ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`block w-5 h-0.5 bg-gray-700 rounded-full transition-all duration-300 ${
+              isOpen ? "-rotate-45 -translate-y-1.5" : ""
+            }`}
+          />
         </div>
       </button>
 
@@ -63,34 +77,35 @@ const PhoneMenu = () => {
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 300, 
+            transition={{
+              type: "spring",
+              stiffness: 300,
               damping: 25,
-              duration: 0.2 
+              duration: 0.2,
             }}
             className="absolute right-0 mt-4 w-60 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50"
-            style={{ 
-              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05)'
+            style={{
+              boxShadow:
+                "0 20px 40px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05)",
             }}
           >
-
             <div className="py-2 px-2">
               {navItems.map((item, index) => (
-                <Link href={`${item?.href}`}
-                    onClick={() => setIsOpen(false)}
+                <Link
+                  href={`${item?.href}`}
+                  onClick={() => setIsOpen(false)}
                   key={index}
                   className={`
                     w-full flex items-center justify-between
                     px-4 py-3 rounded-xl cursor-pointer
                     text-sm font-medium transition-all duration-200
-                    ${item.color || 'text-gray-700'}
-                    ${item.hoverColor || 'hover:bg-amber-50 hover:text-amber-700'}
+                    ${item.color || "text-gray-700"}
+                    ${item.hoverColor || "hover:bg-amber-50 hover:text-amber-700"}
                     mb-1 last:mb-0
                   `}
                 >
                   <div className="flex items-center">
-                    <span className={`mr-3 ${item.color || 'text-amber-500'}`}>
+                    <span className={`mr-3 ${item.color || "text-amber-500"}`}>
                       {item?.icon}
                     </span>
                     <span>{item?.name}</span>
@@ -106,16 +121,16 @@ const PhoneMenu = () => {
         )}
       </AnimatePresence>
       <AnimatePresence>
-              {isOpen && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="fixed inset-0 bg-black/10 backdrop-blur-sm z-40"
-                  onClick={() => setIsOpen(false)}
-                />
-              )}
-            </AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/10 backdrop-blur-sm z-40"
+            onClick={() => setIsOpen(false)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
