@@ -22,14 +22,14 @@ const SearchComponent = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="text-gray-500 mr-2"
+              className="text-[#9f28e3] font-bold mr-2"
             >
               <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input
               type="text"
               placeholder="Search..."
-              className="outline-none w-40 bg-transparent"
+              className="outline-none text-black py-[3px] w-40 bg-transparent"
             />
           </form>
         </div>

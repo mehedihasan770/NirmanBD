@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     // navbar parent
-    <nav className="max-w-11/12 md:max-w-10/12 mx-auto flex justify-between items-center">
+    <nav className="max-w-11/12 md:max-w-10/12 mx-auto border flex justify-between items-center">
         {/* logo section */}
         <section>
             <NavbarLogoSection/>

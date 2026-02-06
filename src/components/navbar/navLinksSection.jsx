@@ -23,12 +23,12 @@ const NavbarLinksSection = () => {
     };
 
     return (
-        <div className='flex items-center space-x-4 p-1 bg-white/50 rounded-3xl backdrop-blur-3xl'>
+        <div className='flex items-center space-x-4 p-1 shadow bg-white/50 rounded-3xl backdrop-blur-3xl'>
             {
               navItems.map((l, i) => (
                 <div key={i} className='relative'>
                   <Link href={l.href}>
-                    <button className={`relative z-10 rounded-3xl cursor-pointer py-2 px-6 transition-colors duration-300 font-bold ${isActive(l.href) ? 'text-white' : 'text-gray-800 hover:text-amber-500 hover:bg-amber-50'}`}>
+                    <button className={`relative z-10 rounded-3xl cursor-pointer py-2 px-6 transition-colors duration-300 font-bold ${isActive(l.href) ? 'text-white' : 'text-gray-800 hover:text-[#9f28e3] hover:bg-[#9f28e3]/10'}`}>
                         {l.name}
                     </button>
                   </Link>
@@ -36,7 +36,7 @@ const NavbarLinksSection = () => {
                   {isActive(l.href) && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-amber-500 rounded-3xl"
+                      className="absolute inset-0 bg-[#9f28e3] rounded-3xl"
                       initial={false}
                       transition={{
                         type: "spring",

@@ -7,7 +7,7 @@ const HeroSection = () => {
         <section className="h-screen mx-auto snap-start relative flex items-center justify-center">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/HeroBackgroundImage.png"
+            src="/Gemini_Generated_Image_xvx64fxvx64fxvx6.png"
             alt="Background Pillar"
             fill
             className="object-cover"
@@ -21,7 +21,7 @@ const HeroSection = () => {
               whileInView={{ x: 0, opacity: 1,rotateX: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{duration: 2,type: "spring",bounce: 0.4,damping: 12,mass: 1,}}
-              className="md:text-[110px] lg:text-[150px] xl:text-[200px] 2xl:text-[250px] font-bold">
+              className="text-[#9f28e3] md:text-[110px] lg:text-[150px] xl:text-[200px] 2xl:text-[250px] font-bold">
               FORT
             </motion.h1>
             <motion.p
@@ -39,7 +39,7 @@ const HeroSection = () => {
               whileInView={{ x: 0, opacity: 1,rotateX: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{duration: 2,type: "spring",bounce: 0.4,damping: 12,mass: 1}}
-              className="md:text-[110px] lg:text-[150px] xl:text-[200px] 2xl:text-[250px] font-bold">
+              className="text-[#9f28e3] md:text-[110px] lg:text-[150px] xl:text-[200px] 2xl:text-[250px] font-bold">
               TUDE
             </motion.h1>
             <motion.p

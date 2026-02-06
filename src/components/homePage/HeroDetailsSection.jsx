@@ -22,9 +22,10 @@ const HeroDetailsSection = () => {
                 whileInView={{ y: 0, opacity: 1,rotateX: 0 }}
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{duration: 1.4,type: "spring",bounce: 0.4,damping: 12,mass: 1}} 
-                className="text-7xl md:text-8xl font-bold text-white tracking-tight leading-tight">
-                CRAFTING TOMORROW'S <br />
-                <span className="bg-linear-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                className="text-7xl md:text-8xl font-bold text-white dark:text-black tracking-tight leading-tight">
+                CRAFTING TOMORROW'S
+                <br />
+                <span className="bg-linear-to-r from-[#9f28e3] to-[#9f28e3]/40 bg-clip-text text-transparent">
                   LEGACY
                 </span>
               </motion.h1>
@@ -35,8 +36,8 @@ const HeroDetailsSection = () => {
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{duration: 1.4,type: "spring",bounce: 0.4,damping: 12,mass: 1, delay: 0.2}}
                 className="my-8 relative">
-                <div className="h-1 w-30 bg-linear-to-r from-amber-500 to-amber-300 rounded-full"></div>
-                <div className="h-1 w-20 bg-amber-400 rounded-full mt-2"></div>
+                <div className="h-1 w-30 bg-linear-to-r from-[#9f28e3] to-[#9f28e3]/40 rounded-full"></div>
+                <div className="h-1 w-20 bg-[#9f28e3] rounded-full mt-2"></div>
               </motion.div>
 
               <motion.p 
@@ -57,10 +58,10 @@ const HeroDetailsSection = () => {
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{duration: 1.4,type: "spring",bounce: 0.4,damping: 12,mass: 1, delay: 0.4}}
                 className="mt-10 flex items-center gap-4">
-                <button className="px-8 py-3 bg-linear-to-r from-amber-500 to-amber-600 text-white font-semibold rounded-lg hover:from-amber-600 hover:to-amber-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-amber-500/25">
+                <button className="px-8 py-3 bg-linear-to-r from-[#9f28e3]/40 to-[#9f28e3] text-white rounded-lg hover:bg-[#9f28e3] font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-amber-500/25">
                   Explore Projects
                 </button>
-                <button className="px-8 py-3 border-2 border-amber-500 text-amber-400 font-semibold rounded-lg hover:bg-amber-500/10 transition-all duration-300">
+                <button className="px-8 py-3 border-2 border-[#9f28e3] text-[#9f28e3] hover:text-white font-semibold rounded-lg hover:bg-[#9f28e3]/40 transition-all duration-300">
                   Contact Us
                 </button>
               </motion.div>

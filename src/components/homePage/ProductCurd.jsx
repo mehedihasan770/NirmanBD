@@ -7,16 +7,9 @@ const ProductCard = ({ product }) => {
   return (
     <motion.div 
       className="group relative bg-white/50 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden border border-gray-100"
-      initial={{ opacity: 0, y: 30, scale: 0.95 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ 
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-        duration: 0.6
-      }}
-      viewport={{ once: true, amount: 0.3 }}
-      whileHover={{ y: -8 }}
+      initial={{y: 100, opacity: 0}}
+      whileInView={{ y: 0, opacity: 1}}
+      transition={{duration: 0.1, type: "spring", bounce: 0.4,}}
     >
       {/* Glow Effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

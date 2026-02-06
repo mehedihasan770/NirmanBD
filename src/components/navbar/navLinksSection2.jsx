@@ -5,6 +5,7 @@ import React from 'react';
 import SearchComponent from './navbarSearch';
 import UserMenu from './UserMenu';
 import PhoneMenu from './phoneMenu';
+import ThemeToggleButton from './ThemeToggleButton';
 
 const NavbarLinksSection2 = () => {
   return (
@@ -15,7 +16,7 @@ const NavbarLinksSection2 = () => {
       <div>
         <Link href={"/curt"}>
           <button
-            className={`relative z-10 py-2 px-6 transition-colors duration-300 font-bold text-white bg-amber-500 rounded-3xl`}
+            className={`relative z-10 py-3 px-3 transition-colors duration-300 font-bold text-white bg-[#9f28e3] rounded-full`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -35,6 +36,9 @@ const NavbarLinksSection2 = () => {
           </button>
         </Link>
       </div>
+      <section>
+        <ThemeToggleButton/>
+      </section>
       <section>
         <UserMenu/>
       </section>
