@@ -35,7 +35,7 @@ const HeroDetailsSection = () => {
                   damping: 12,
                   mass: 1,
                 }}
-                className="text-7xl md:text-8xl font-bold text-[#9f28e3] tracking-tight leading-tight"
+                className="md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#9f28e3] tracking-tight leading-tight"
               >
                 CRAFTING TOMORROW'S
                 <br />
@@ -74,7 +74,7 @@ const HeroDetailsSection = () => {
                   mass: 1,
                   delay: 0.3,
                 }}
-                className="text-2xl md:text-2xl font-semibold text-black/50 dark:text-white/50 leading-relaxed text-justify max-w-4xl"
+                className="md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px] font-semibold text-black/50 dark:text-white/50 leading-relaxed text-justify max-w-4xl"
               >
                 At NirmanBD, we merge timeless engineering with cutting-edge
                 innovation. Our dedication to quality and sustainable practices

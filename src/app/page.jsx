@@ -61,11 +61,11 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="relative z-10 snap-start h-screen">
+      <section className="hidden md:block relative z-10 snap-start h-screen">
         <HeroSection />
       </section>
 
-      <section className="relative z-10 snap-start h-screen section-two">
+      <section className="hidden md:block relative z-10 snap-start h-screen section-two">
         <HeroDetailsSection />
       </section>
 
