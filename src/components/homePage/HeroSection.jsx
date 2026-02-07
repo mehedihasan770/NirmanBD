@@ -7,10 +7,17 @@ const HeroSection = () => {
         <section className="h-screen mx-auto snap-start relative flex items-center justify-center">
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/Gemini_Generated_Image_xvx64fxvx64fxvx6.png"
+            src="/HeroLight.png"
             alt="Background Pillar"
             fill
-            className="object-cover"
+            className="object-cover dark:hidden"
+            priority
+          />
+          <Image
+            src="/HeroDark.png"
+            alt="Background Pillar"
+            fill
+            className="object-cover hidden dark:block"
             priority
           />
         </div>
@@ -29,7 +36,7 @@ const HeroSection = () => {
               whileInView={{ x: 0, y: 0, opacity: 1,rotateX: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{duration: 2,type: "spring",bounce: 0.4,damping: 12,mass: 1,}}
-              className="border-t-8 border-amber-500 lg:text-[23px] xl:text-[30.5px] 2xl:text-[38px] font-bold text-white/75 md:-mt-6 md:ml-2 lg:-mt-8 lg:ml-2 xl:-mt-13 xl:ml-4 2xl:-mt-16 2xl:ml-5">
+              className="lg:text-[23px] xl:text-[30.5px] 2xl:text-[38px] font-bold text-black/50 dark:text-white/50 md:-mt-6 md:ml-2 lg:-mt-8 lg:ml-2 xl:-mt-13 xl:ml-4 2xl:-mt-16 2xl:ml-5">
               OTOL VORSA SOTHIK NIRMAN
             </motion.p>
           </div>
@@ -47,7 +54,7 @@ const HeroSection = () => {
               whileInView={{ x: 0, y: 0, opacity: 1,rotateX: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{duration: 2,type: "spring",bounce: 0.4,damping: 12,mass: 1,}}
-              className="border-t-8 border-amber-500 text-right lg:text-[23px] xl:text-[30.5px] 2xl:text-[38px] font-bold text-white/75 md:-mt-6 lg:-mt-8 lg:mr-1 xl:-mt-13 xl:mr-1.5 2xl:-mt-16 2xl:mr-2">
+              className="text-right lg:text-[23px] xl:text-[30.5px] 2xl:text-[38px] font-bold text-black/50 dark:text-white/50 md:-mt-6 lg:-mt-8 lg:mr-1 xl:-mt-13 xl:mr-1.5 2xl:-mt-16 2xl:mr-2">
               DERO VITTI UNNOTO KATHAMO
             </motion.p>
           </div>

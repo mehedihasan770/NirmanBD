@@ -8,44 +8,74 @@ const HeroDetailsSection = () => {
         <section className="section-two h-screen snap-start relative flex items-center justify-center">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/HeroBackgroundImage.png"
+              src="/HeroDetailsLight.png"
               alt="Background Pillar"
               fill
-              className="object-cover"
+              className="object-cover dark:hidden"
+              priority
+            />
+            <Image
+              src="/HeroDetailsDark.png"
+              alt="Background Pillar"
+              fill
+              className="object-cover hidden dark:block"
               priority
             />
           </div>
           <div className="w-full max-w-11/12 md:max-w-10/12 mx-auto flex justify-between">
             <div className="flex-3">
-              <motion.h1 
-                initial={{y: 90, opacity: 0,rotateX: -15 }}
-                whileInView={{ y: 0, opacity: 1,rotateX: 0 }}
+              <motion.h1
+                initial={{ y: 90, opacity: 0, rotateX: -15 }}
+                whileInView={{ y: 0, opacity: 1, rotateX: 0 }}
                 viewport={{ once: false, amount: 0.3 }}
-                transition={{duration: 1.4,type: "spring",bounce: 0.4,damping: 12,mass: 1}} 
-                className="text-7xl md:text-8xl font-bold text-white dark:text-black tracking-tight leading-tight">
+                transition={{
+                  duration: 1.4,
+                  type: "spring",
+                  bounce: 0.4,
+                  damping: 12,
+                  mass: 1,
+                }}
+                className="text-7xl md:text-8xl font-bold text-[#9f28e3] tracking-tight leading-tight"
+              >
                 CRAFTING TOMORROW'S
                 <br />
-                <span className="bg-linear-to-r from-[#9f28e3] to-[#9f28e3]/40 bg-clip-text text-transparent">
+                <span className="text-black dark:text-white">
                   LEGACY
                 </span>
               </motion.h1>
 
-              <motion.div 
-                initial={{y: 90, opacity: 0,rotateX: -15 }}
-                whileInView={{ y: 0, opacity: 1,rotateX: 0 }}
+              <motion.div
+                initial={{ y: 90, opacity: 0, rotateX: -15 }}
+                whileInView={{ y: 0, opacity: 1, rotateX: 0 }}
                 viewport={{ once: false, amount: 0.3 }}
-                transition={{duration: 1.4,type: "spring",bounce: 0.4,damping: 12,mass: 1, delay: 0.2}}
-                className="my-8 relative">
+                transition={{
+                  duration: 1.4,
+                  type: "spring",
+                  bounce: 0.4,
+                  damping: 12,
+                  mass: 1,
+                  delay: 0.2,
+                }}
+                className="my-8 relative"
+              >
                 <div className="h-1 w-30 bg-linear-to-r from-[#9f28e3] to-[#9f28e3]/40 rounded-full"></div>
                 <div className="h-1 w-20 bg-[#9f28e3] rounded-full mt-2"></div>
               </motion.div>
 
-              <motion.p 
-                initial={{y: 90, opacity: 0,rotateX: -15 }}
-                whileInView={{ y: 0, opacity: 1,rotateX: 0 }}
+              <motion.p
+                initial={{ y: 90, opacity: 0, rotateX: -15 }}
+                whileInView={{ y: 0, opacity: 1, rotateX: 0 }}
                 viewport={{ once: false, amount: 0.3 }}
-                transition={{duration: 1.4,type: "spring",bounce: 0.4,damping: 12,mass: 1, delay: 0.3}}
-                className="text-2xl md:text-2xl text-white/70 leading-relaxed text-justify max-w-4xl">
+                transition={{
+                  duration: 1.4,
+                  type: "spring",
+                  bounce: 0.4,
+                  damping: 12,
+                  mass: 1,
+                  delay: 0.3,
+                }}
+                className="text-2xl md:text-2xl font-semibold text-black/50 dark:text-white/50 leading-relaxed text-justify max-w-4xl"
+              >
                 At NirmanBD, we merge timeless engineering with cutting-edge
                 innovation. Our dedication to quality and sustainable practices
                 ensures every structure we build is a testament to durability,
@@ -53,11 +83,19 @@ const HeroDetailsSection = () => {
               </motion.p>
 
               <motion.div
-                initial={{y: 90, opacity: 0,rotateX: -15 }}
-                whileInView={{ y: 0, opacity: 1,rotateX: 0 }}
+                initial={{ y: 90, opacity: 0, rotateX: -15 }}
+                whileInView={{ y: 0, opacity: 1, rotateX: 0 }}
                 viewport={{ once: false, amount: 0.3 }}
-                transition={{duration: 1.4,type: "spring",bounce: 0.4,damping: 12,mass: 1, delay: 0.4}}
-                className="mt-10 flex items-center gap-4">
+                transition={{
+                  duration: 1.4,
+                  type: "spring",
+                  bounce: 0.4,
+                  damping: 12,
+                  mass: 1,
+                  delay: 0.4,
+                }}
+                className="mt-10 flex items-center gap-4"
+              >
                 <button className="px-8 py-3 bg-linear-to-r from-[#9f28e3]/40 to-[#9f28e3] text-white rounded-lg hover:bg-[#9f28e3] font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-amber-500/25">
                   Explore Projects
                 </button>
